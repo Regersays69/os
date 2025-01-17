@@ -1,0 +1,43 @@
+#!/bin/bash
+
+# Fungsi untuk menginstal Subfinder
+install_subfinder() {
+  echo "Memeriksa apakah Subfinder sudah terpasang..."
+  if ! command -v subfinder &> /dev/null; then
+    echo "Subfinder tidak ditemukan. Mengunduh dan memasang Subfinder..."
+    curl -s https://api.github.com/repos/projectdiscovery/subfinder/releases/latest | \
+    grep "browser_download_url.*linux_amd64.zip" | cut -d '"' -f 4 | \
+    wget -i - -O subfinder.zip
+    unzip subfinder.zip
+    chmod +x subfinder
+    sudo mv subfinder /usr/local/bin/
+    rm subfinder.zip
+    echo "Subfinder berhasil dipasang!"
+  else
+    echo "Subfinder sudah terpasang."
+  fi
+}
+
+# Fungsi untuk menjalankan Subfinder
+run_subfinder() {
+  read -p "Masukkan domain target: " DOMAIN
+  OUTPUT_FILE="subdomains_$DOMAIN.txt"
+
+  echo "Menjalankan Subfinder untuk domain: $DOMAIN..."
+  subfinder -d "$DOMAIN" -o "$OUTPUT_FILE"
+
+  if [ -f "$OUTPUT_FILE" ]; then
+    echo "Pencarian selesai! Subdomain disimpan di file: $OUTPUT_FILE"
+  else
+    echo "Gagal menyimpan hasil. Periksa konfigurasi Subfinder."
+  fi
+}
+
+# Fungsi utama
+main() {
+  install_subfinder
+  run_subfinder
+}
+
+# Menjalankan script utama
+main
