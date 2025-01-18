@@ -519,7 +519,7 @@ if [ -f "/etc/afak.conf" ]; then
 rm /etc/afak.conf > /dev/null 2>&1
 fi
 history -c
-serverV=$( curl -sS ${REPO}versi  )
+serverV=$( curl -sS ${REPO2}versi  )
 echo $serverV > /opt/.ver
 echo "00" > /home/daily_reboot
 aureb=$(cat /home/daily_reboot)
