@@ -1,7 +1,7 @@
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Capriola&size=40&duration=4000&pause=450&color=F70069&background=FFFFAA00&center=true&random=false&width=600&height=100&lines=XWAN VPN AUTOSCRIPT !;Explore the world of features!" /></p>
+  <img src="https://readme-typing-svg.demolab.com?font=Capriola&size=40&duration=4000&pause=450&color=F70069&background=FFFFAA00&center=true&random=false&width=600&height=100&lines=MANDIRI NETWORK !;Explore the world of features!" /></p>
 
-![IMAGE](https://github.com/MyRidwan/MyRidwan/blob/ipuk/20221010_001912.png)
+![IMAGE](https://github.com/Regersays69/os/blob/main/mandiri.jpg)
 
 ### INSTALL SCRIPT 
 <pre><code>wget -q https://raw.githubusercontent.com/regersays69/os/main/setup.sh && chmod +x setup.sh && ./setup.sh
