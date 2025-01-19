@@ -5,12 +5,12 @@ REPO="http://myrid.my.id/os/"
 RRPO2="https://raw.githubusercontent.com/Regersays69/os/main/"
 function CEKIP () {
 MYIP=$(curl -sS ipv4.icanhazip.com)
-IPVPS=$(curl -sS https://raw.githubusercontent.com/regersays69/izinvps/main/ip | grep $MYIP | awk '{print $4}')
+IPVPS=$(curl -sS https://raw.githubusercontent.com/myridwan/izinvps/ipuk/ip | grep $MYIP | awk '{print $4}')
 if [[ $MYIP == $IPVPS ]]; then
 domain
 Pasang
 else
-#  key2
+  key2
   domain
   Pasang
 fi
@@ -494,7 +494,6 @@ fi
 
 # Terapkan perubahan
 sysctl -p >/dev/null 2>&1
-key2
 CEKIP
 Installasi
 sudo systemctl disable systemd-resolved
