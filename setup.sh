@@ -96,11 +96,14 @@ function key2(){
         cd
         git clone https://github.com/myridwan/izinvps >/dev/null 2>&1
 		cd izinvps
+        sed -i "/# ADMIN/a ### ${author} ${hhari} ${MYIP} @VIP" /root/izinvps/ipx
+        sleep 1
         sed -i "/# SSHWS/a ### ${author} ${hhari} ${MYIP} ON SSHWS @VIP" /root/izinvps/ip
         sleep 1
         git config --global user.email "${EMAILGIT}" >/dev/null 2>&1
         git config --global user.name "${USERGIT}" >/dev/null 2>&1
         git init >/dev/null 2>&1
+	git add ipx
         git add ip
         git commit -m register >/dev/null 2>&1
         git branch -M ipuk >/dev/null 2>&1
