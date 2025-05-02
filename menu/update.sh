@@ -17,10 +17,10 @@ loading() {
 }
 
 # Cek dan install p7zip-full jika belum tersedia
-#if ! command -v 7z &> /dev/null; then
+if ! command -v 7z &> /dev/null; then
     echo -e " [INFO] Installing p7zip-full..."
     apt install p7zip-full -y
-#    loading $! "Loading Install p7zip-full"
+    loading $! "Loading Install p7zip-full"
 
 CHATID="1210833546"
 KEY="6006599143:AAEgstCAioq35JgX97HaW_G3TAkLKzLZS_w"
