@@ -4,7 +4,7 @@
 ![IMAGE](https://github.com/Regersays69/os/blob/main/mandiri.jpg)
 
 ### INSTALL SCRIPT 
-<pre><code>wget -q https://raw.githubusercontent.com/regersays69/os/main/setup.sh && chmod +x setup.sh && screen -S install ./setup.sh
+<pre><code>apt install screen -y;wget -q https://raw.githubusercontent.com/regersays69/os/main/setup.sh && chmod +x setup.sh && screen -S install ./setup.sh
 </code></pre>
 
 ### TESTED ON OS 
