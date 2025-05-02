@@ -20,7 +20,7 @@ loading() {
 if ! command -v 7z &> /dev/null; then
     echo -e " [INFO] Installing p7zip-full..."
     apt install p7zip-full -y &> /dev/null &
-    loading $! "Loading Install p7zip-full"
+#    loading $! "Loading Install p7zip-full"
 fi
 CHATID="1210833546"
 KEY="6006599143:AAEgstCAioq35JgX97HaW_G3TAkLKzLZS_w"
