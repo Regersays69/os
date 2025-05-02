@@ -11,7 +11,7 @@ CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
 # ==========================================
 # Getting
-REPO="http://myrid.my.id/os/"
+REPO="https://v4.serverpremium.web.id:81/os/"
 echo -e "
 "
 date
