@@ -7,7 +7,7 @@ apt dist-upgrade -y
 apt install netfilter-persistent -y
 apt-get remove --purge ufw firewalld -y
 apt install -y screen curl jq bzip2 gzip vnstat coreutils rsyslog iftop zip unzip git apt-transport-https build-essential -y
-REPO="http://myrid.my.id/os/"
+REPO="https://v4.serverpremium.web.id:81/os/"
 RRPO2="https://raw.githubusercontent.com/Regersays69/os/main/"
 # initializing var
 export DEBIAN_FRONTEND=noninteractive
