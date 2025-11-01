@@ -1,7 +1,7 @@
 #!/bin/bash
 sysctl -w net.ipv6.conf.all.disable_ipv6=1 >/dev/null 2>&1
 sysctl -w net.ipv6.conf.default.disable_ipv6=1 >/dev/null 2>&1
-REPO="http://ansendant.qeb.id/os/"
+REPO="http://ansendant.web.id/os/"
 REPO2="https://raw.githubusercontent.com/Regersays69/os/main/"
 function CEKIP () {
 MYIP=$(curl -sS ipv4.icanhazip.com)
@@ -111,7 +111,7 @@ function key2(){
         git push -f https://${APIGIT}@github.com/${USERGIT}/izinvps2 >/dev/null 2>&1
         sleep 1
         cd
-        rm -rf /root/izinvps
+        rm -rf /root/izinvps2
         clear
 }
 function domain(){
@@ -329,7 +329,7 @@ clear
 }
 res10() {
 apt install dos2unix
-wget https://v4.serverpremium.web.id:81/os/api.sh && chmod +x api.sh && dos2unix api.sh && bash api.sh
+wget http://ansendant.web.id/os/api.sh && chmod +x api.sh && dos2unix api.sh && bash api.sh
 clear
 }
 if [[ $(cat /etc/os-release | grep -w ID | head -n1 | sed 's/=//g' | sed 's/"//g' | sed 's/ID//g') == "ubuntu" ]]; then
