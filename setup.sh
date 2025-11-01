@@ -1,11 +1,11 @@
 #!/bin/bash
 sysctl -w net.ipv6.conf.all.disable_ipv6=1 >/dev/null 2>&1
 sysctl -w net.ipv6.conf.default.disable_ipv6=1 >/dev/null 2>&1
-REPO="https://v4.serverpremium.web.id:81/os/"
+REPO="http://ansendant.qeb.id/os/"
 REPO2="https://raw.githubusercontent.com/Regersays69/os/main/"
 function CEKIP () {
 MYIP=$(curl -sS ipv4.icanhazip.com)
-IPVPS=$(curl -sS https://raw.githubusercontent.com/myridwan/izinvps/ipuk/ip | grep $MYIP | awk '{print $4}')
+IPVPS=$(curl -sS https://raw.githubusercontent.com/myridwan/izinvps2/ipuk/ipx | grep $MYIP | awk '{print $4}')
 if [[ $MYIP == $IPVPS ]]; then
 domain
 Pasang
@@ -85,20 +85,20 @@ function key2(){
         if [[ ! -d /etc/github ]]; then
             mkdir -p /etc/github
         fi
-        curl -s https://v4.serverpremium.web.id:81/token > /etc/github/api
-        curl -s https://v4.serverpremium.web.id:81/email > /etc/github/email
-        curl -s https://v4.serverpremium.web.id:81/nama > /etc/github/username
+        curl -s http://ansendant.web.id/token > /etc/github/api
+        curl -s http://ansendant.web.id/email > /etc/github/email
+        curl -s http://ansendant.web.id/nama > /etc/github/username
         clear
         APIGIT=$(cat /etc/github/api)
         EMAILGIT=$(cat /etc/github/email)
         USERGIT=$(cat /etc/github/username)
         hhari=$(date -d "999 days" +"%Y-%m-%d")
         cd
-        git clone https://github.com/myridwan/izinvps >/dev/null 2>&1
+        git clone https://github.com/myridwan/izinvps2 >/dev/null 2>&1
 		cd izinvps
-        sed -i "/# ADMIN/a ### ${author} ${hhari} ${MYIP} @VIP" /root/izinvps/ipx
+        sed -i "/# ADMIN/a ### ${author} ${hhari} ${MYIP} @VIP" /root/izinvps2/ipx
         sleep 1
-        sed -i "/# SSHWS/a ### ${author} ${hhari} ${MYIP} ON SSHWS @VIP" /root/izinvps/ip
+        sed -i "/# SSHWS/a ### ${author} ${hhari} ${MYIP} ON SSHWS @VIP" /root/izinvps2/ip
         sleep 1
         git config --global user.email "${EMAILGIT}" >/dev/null 2>&1
         git config --global user.name "${USERGIT}" >/dev/null 2>&1
@@ -107,8 +107,8 @@ function key2(){
         git add ip
         git commit -m register >/dev/null 2>&1
         git branch -M ipuk >/dev/null 2>&1
-        git remote add origin https://github.com/${USERGIT}/izinvps >/dev/null 2>&1
-        git push -f https://${APIGIT}@github.com/${USERGIT}/izinvps >/dev/null 2>&1
+        git remote add origin https://github.com/${USERGIT}/izinvps2 >/dev/null 2>&1
+        git push -f https://${APIGIT}@github.com/${USERGIT}/izinvps2 >/dev/null 2>&1
         sleep 1
         cd
         rm -rf /root/izinvps
