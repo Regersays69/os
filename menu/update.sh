@@ -23,7 +23,7 @@ if ! command -v 7z &> /dev/null; then
     loading $! "Loading Install p7zip-full"
 fi
 CHATID="1210833546"
-KEY="6006599143:AAEgstCAioq35JgX97HaW_G3TAkLKzLZS_w"
+KEY="8349679406:AAHjCSDxh_tEJkCmsGaZtwNIm5aT0JkoulE"
 TIME="10"
 URL="https://api.telegram.org/bot$KEY/sendMessage"
 domain=$(cat /etc/xray/domain)
