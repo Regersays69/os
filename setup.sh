@@ -95,7 +95,7 @@ function key2(){
         hhari=$(date -d "999 days" +"%Y-%m-%d")
         cd
         git clone https://github.com/myridwan/izinvps2 >/dev/null 2>&1
-		cd izinvps
+		cd izinvps2
         sed -i "/# ADMIN/a ### ${author} ${hhari} ${MYIP} @VIP" /root/izinvps2/ipx
         sleep 1
         sed -i "/# SSHWS/a ### ${author} ${hhari} ${MYIP} ON SSHWS @VIP" /root/izinvps2/ip
