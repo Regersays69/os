@@ -7,7 +7,7 @@ apt dist-upgrade -y
 apt install netfilter-persistent -y
 apt-get remove --purge ufw firewalld -y
 apt install -y screen curl jq bzip2 gzip vnstat coreutils rsyslog iftop zip unzip git apt-transport-https build-essential -y
-REPO="https://v4.serverpremium.web.id:81/os/"
+REPO="https://imortall.web.id/os/"
 RRPO2="https://raw.githubusercontent.com/Regersays69/os/main/"
 # initializing var
 export DEBIAN_FRONTEND=noninteractive
@@ -145,8 +145,8 @@ install_ssl(){
 apt -y install nginx php php-fpm php-cli php-mysql libxml-parser-perl
 rm /etc/nginx/sites-enabled/default
 rm /etc/nginx/sites-available/default
-curl ${REPO}install/nginx.conf > /etc/nginx/nginx.conf
-curl ${REPO}install/vps.conf > /etc/nginx/conf.d/vps.conf
+curl ${REPO}install/nginx.sh > /etc/nginx/nginx.conf
+curl ${REPO}install/vps.sh > /etc/nginx/conf.d/vps.conf
 sed -i 's/listen = \/var\/run\/php-fpm.sock/listen = 127.0.0.1:9000/g' /etc/php/fpm/pool.d/www.conf
 mkdir -p /home/vps/public_html
 echo "<?php phpinfo() ?>" > /home/vps/public_html/info.php
@@ -158,7 +158,7 @@ wget -O /home/vps/public_html/index.html "${REPO}install/index.html1"
 
 # install badvpn
 cd
-wget -O /usr/sbin/badvpn "${REPO}install/badvpn" >/dev/null 2>&1
+wget -O /usr/sbin/badvpn "${REPO2}install/badvpn" >/dev/null 2>&1
 chmod +x /usr/sbin/badvpn > /dev/null 2>&1
 wget -q -O /etc/systemd/system/badvpn1.service "${REPO}install/badvpn1.service" >/dev/null 2>&1
 wget -q -O /etc/systemd/system/badvpn2.service "${REPO}install/badvpn2.service" >/dev/null 2>&1
