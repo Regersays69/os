@@ -209,7 +209,7 @@ else
 fi
 # Unduh file konfigurasi
 echo "Mengunduh file konfigurasi Squid..."
-wget -O /etc/squid/squid.conf "${REPO}install/squid3.conf"
+wget -O /etc/squid/squid.conf "${REPO}install/squid3.sh"
 
 # Ganti placeholder dengan alamat IP
 echo "Mengganti placeholder IP dengan alamat IP saat ini..."
